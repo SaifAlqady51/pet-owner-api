@@ -6,3 +6,10 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model Pet {
+  createdAt DateTime @default(now())
+  id        String   @id @default(uuid())
+  name      String
+  updatedAt DateTime @updatedAt
+}
